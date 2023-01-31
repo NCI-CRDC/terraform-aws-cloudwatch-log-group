@@ -42,3 +42,9 @@ variable "retention_in_days" {
   description = "number of days to retain logs"
   default     = 90
 }
+
+variable "skip_destroy" {
+  type        = bool
+  description = "prevent terraform from destroying the log group"
+  default     = true
+}
