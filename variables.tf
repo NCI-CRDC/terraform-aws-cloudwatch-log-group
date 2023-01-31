@@ -14,6 +14,7 @@ variable "env" {
     error_message = "valid values are 'dev', 'qa', 'stage', 'prod', and 'nonprod'"
   }
 }
+
 variable "program" {
   type        = string
   description = "the program associated with the application"
@@ -23,4 +24,21 @@ variable "program" {
     condition     = contains(["crdc", "ccdi", "ctos"], var.program)
     error_message = "valid values for program are 'crdc', 'ccdi', and 'ctos'"
   }
+}
+
+variable "kms_key_id" {
+  type        = string
+  description = "id of the kms key to encrypt the logs - defaults to null"
+  default     = null
+}
+
+variable "log_group_suffix" {
+  type        = string
+  description = "log group name suffix that follows the stack name"
+}
+
+variable "retention_in_days" {
+  type        = number
+  description = "number of days to retain logs"
+  default     = 90
 }
