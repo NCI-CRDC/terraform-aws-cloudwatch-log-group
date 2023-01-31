@@ -38,6 +38,7 @@ No modules.
 | <a name="input_log_group_suffix"></a> [log\_group\_suffix](#input\_log\_group\_suffix) | log group name suffix that follows the stack name | `string` | n/a | yes |
 | <a name="input_program"></a> [program](#input\_program) | the program associated with the application | `string` | n/a | yes |
 | <a name="input_retention_in_days"></a> [retention\_in\_days](#input\_retention\_in\_days) | number of days to retain logs | `number` | `90` | no |
+| <a name="input_skip_destroy"></a> [skip\_destroy](#input\_skip\_destroy) | prevent terraform from destroying the log group | `bool` | `true` | no |
 
 # Outputs
 
